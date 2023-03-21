@@ -23,8 +23,6 @@
         }
         
         input[type="submit"] {
-            background-color: #007BFF;
-            color: #FFFFFF;
             border: none;
             padding: 10px 20px;
             border-radius: 5px;
@@ -33,18 +31,31 @@
             width: 150px; /* Todos los botones del mismo tamaño */
         }
         
-        input[type="submit"]:hover {
-            background-color: #0062CC;
+        .btn-green {
+            background-color: #28a745;
+            color: #fff;
         }
         
-        /* Estilos específicos para cada botón */
-        form:nth-child(2) input[type="submit"] {
-            background-color: #FF4D4D;
+        .btn-green:hover {
+            background-color: #218838;
         }
         
-        form:nth-child(3) input[type="submit"] {
-            /* Conserva el color original */
-            background-color: #007BFF;
+        .btn-red {
+            background-color: #dc3545;
+            color: #fff;
+        }
+        
+        .btn-red:hover {
+            background-color: #c82333;
+        }
+        
+        .btn-blue {
+            background-color: #007bff;
+            color: #fff;
+        }
+        
+        .btn-blue:hover {
+            background-color: #0069d9;
         }
         
         /* Estilos para dispositivos móviles */
@@ -61,18 +72,18 @@
     </style>
 </head>
 <body>
-    <h1>Control de servicio wg0</h1>
+    <h1>Control de servicio WireGuard</h1>
 
     <form method="get" action="/start">
-        <input type="submit" value="Iniciar servicio">
+        <input type="submit" value="Iniciar servicio" class="btn-green">
     </form>
 
     <form method="get" action="/stop">
-        <input type="submit" value="Detener servicio">
+        <input type="submit" value="Detener servicio" class="btn-red">
     </form>
 
     <form method="get" action="/reboot">
-        <input type="submit" value="Reiniciar">
+        <input type="submit" value="Reiniciar Server" class="btn-blue">
     </form>
 </body>
 </html>
