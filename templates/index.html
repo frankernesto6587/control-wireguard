@@ -2,13 +2,17 @@
 <html>
 <head>
     <title>Control de servicio wg0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
-            background-color: #F2F2F2;
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
         }
         
         h1 {
             text-align: center;
+            margin-top: 50px;
         }
         
         form {
@@ -26,10 +30,33 @@
             border-radius: 5px;
             cursor: pointer;
             margin: 0 10px;
+            width: 150px; /* Todos los botones del mismo tamaño */
         }
         
         input[type="submit"]:hover {
             background-color: #0062CC;
+        }
+        
+        /* Estilos específicos para cada botón */
+        form:nth-child(2) input[type="submit"] {
+            background-color: #FF4D4D;
+        }
+        
+        form:nth-child(3) input[type="submit"] {
+            /* Conserva el color original */
+            background-color: #007BFF;
+        }
+        
+        /* Estilos para dispositivos móviles */
+        @media only screen and (max-width: 600px) {
+            form {
+                flex-wrap: wrap;
+            }
+            
+            input[type="submit"] {
+                margin: 10px;
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -49,5 +76,4 @@
     </form>
 </body>
 </html>
-
 
